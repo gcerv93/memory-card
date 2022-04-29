@@ -47,10 +47,44 @@ table {
 	border-spacing: 0;
 }
 
+html, body {
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 header {
   height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
+}
+
+footer {
+  box-sizing: border-box;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > p >  a {
+  text-decoration: none;
+}
+
+footer > p > a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
 }
