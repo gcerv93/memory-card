@@ -1,9 +1,7 @@
+import "../styles/main.css";
+
 const Header = () => {
-  return (
-    <div>
-      <header>Pokemon Memory</header>
-    </div>
-  );
+  return <header>Pokemon Memory</header>;
 };
 
 export default Header;
