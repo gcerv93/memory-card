@@ -85,6 +85,16 @@ footer > p > a:hover {
   text-decoration: underline;
 }
 
-.content {
+.content-box {
   flex: 1;
+}
+
+.scores {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.scores p {
+  font-size: 2rem;
 }
