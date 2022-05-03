@@ -54,7 +54,7 @@ const Content = () => {
 
   return (
     <div className="content-box">
-      <Scores />
+      <Scores bestScore={bestScore} currentScore={currentScore} />
       <Cards cards={cards} clickHandler={handleClicks} />
     </div>
   );
