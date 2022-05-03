@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { shuffleArray } from "../utils";
 import Card from "./Card";
 
 const Cards = () => {
@@ -7,15 +8,6 @@ const Cards = () => {
   const [clicked, setClicked] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-
-  function shuffleArray(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-
-    return arr;
-  }
 
   async function fetchData(num) {
     const displayData = [];
