@@ -4,6 +4,9 @@ import Card from "./Card";
 const Cards = () => {
   const CARD_AMOUNT = 12;
   const [displays, setDisplays] = useState([]);
+  const [clicked, setClicked] = useState([]);
+  const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -31,6 +34,22 @@ const Cards = () => {
     return displayData;
   }
 
+  function handleClicks(id) {
+    if (clicked.indexOf(id) === -1) {
+      setClicked(clicked.concat(id));
+      setCurrentScore((prevScore) => prevScore + 1);
+      if (currentScore >= bestScore) {
+        setBestScore((prevScore) => prevScore + 1);
+      }
+    } else {
+      setClicked([]);
+      setCurrentScore(0);
+      setBestScore((prevScore) => prevScore);
+    }
+
+    setDisplays(shuffleArray(displays));
+  }
+
   useEffect(() => {
     console.log("hello");
     const loadData = async () => {
@@ -43,12 +62,13 @@ const Cards = () => {
   return (
     <div className="cards">
       {displays.length > 0
-        ? displays.map((info) => (
+        ? displays.map((info, idx) => (
             <Card
-              key={info.dataID}
+              key={idx}
               id={info.dataID}
               name={info.dataName}
               image={info.dataImage}
+              clickHandler={handleClicks}
             />
           ))
         : null}
