@@ -150,6 +150,11 @@ footer > p > a:hover {
   border-radius: 10px;
 }
 
+.card:hover {
+  transform: scale(105%, 105%);
+  cursor: pointer;
+}
+
 .cardName {
   display: flex;
   justify-content: center;
