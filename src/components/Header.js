@@ -4,7 +4,7 @@ import HeaderImg from "../images/pokemon_memory.png";
 const Header = () => {
   return (
     <header>
-      <img src={HeaderImg} alt="" height="100px"></img>
+      <img src={HeaderImg} alt="" height="125px"></img>
     </header>
   );
 };

@@ -56,22 +56,25 @@ html, body {
 }
 
 .App {
+  background-color: #dfdfdf;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 header {
+  background-color: #FB1B1B;
   height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
+  border: 2px solid black;
 }
 
 footer {
   box-sizing: border-box;
-  height: 3rem;
+  height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,10 +101,31 @@ footer > p > a:hover {
   justify-content: center;
   gap: 5rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .scores p {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+.currScore, .bestScore {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 2rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currScore {
+  background-color: #fb1b1b;
+  color: white;
+}
+
+.bestScore {
+  background-color: #4dad5b;
+  color: white;
 }
 
 .cards {
@@ -114,6 +138,7 @@ footer > p > a:hover {
 }
 
 .card {
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
